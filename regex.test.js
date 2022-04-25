@@ -1,6 +1,11 @@
 'use strict';
 
 
+const { xit } = require("@jest/globals");
+
+
+
+
 
 /* Write a function that take a string and return true if the string only contain uppercase and lowercase
 characters (no numbers and symbols) and it should end with capital A else return false */
@@ -10,11 +15,11 @@ function capitalA(s){
     let reg = /\D[A-Z][a-z]A$/;
     let reg1 = /\d[^a-z][^A-Z][^0-9] /;
     if ((reg.test(s))){
-        console.log("true");
+      return true;
     } else if ((reg1.test(s))) {
-        console.log("false");
+        return false;
     }
-    return;
+    
 }
 
 
@@ -22,8 +27,9 @@ function capitalA(s){
 which end with io (example@example.io) */
 
 function ioEmail(email){
-    // Add your logic.
-    return;
+    let mailFormat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+	if(email.value.match(mailFormat))	return true;
+    return (alert("This is not a valid email address"));
 }
 
 /* You have a text that contain image names with their extention you need to write a function to 
