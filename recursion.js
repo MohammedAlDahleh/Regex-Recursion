@@ -18,8 +18,8 @@ pow(2,4) = 16
 
 
 function pow(x,n){
-   if (n == 0) return 1;
-   return x * pow(x,n-1);
+   if (x == 0) return 1;
+   return n * pow(n,x-1);
 }
 
 /* The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series,
