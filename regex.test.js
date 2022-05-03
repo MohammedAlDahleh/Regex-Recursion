@@ -24,8 +24,8 @@ function capitalA(s){
 which end with io (example@example.io) */
 
 function ioEmail(email){
-    let mailFormat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-	if(email.value.match(mailFormat))	return true;
+    let mailFormat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	if(email.match(mailFormat))	return true;
     return (alert("This is not a valid email address"));
 }
 
