@@ -12,14 +12,14 @@ characters (no numbers and symbols) and it should end with capital A else return
 
 function capitalA(s){
     // Add your logic.
-    let reg = /\D[A-Z][a-z]A$/;
-    let reg1 = /\d[^a-z][^A-Z][^0-9] /;
-    if ((reg.test(s))){
-      return true;
-    } else if ((reg1.test(s))) {
-        return false;
-    }
+    let reg1 = /[^0-9]/;
+    let reg = /[aA-zZ]A$/;
     
+    if (reg1.test(s)){
+      return false;
+    } else if (reg.test(s)){
+        return true;
+    }
 }
 
 
@@ -27,8 +27,8 @@ function capitalA(s){
 which end with io (example@example.io) */
 
 function ioEmail(email){
-    let mailFormat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-	if(email.value.match(mailFormat))	return true;
+    let mailFormat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	if(email.match(mailFormat))	return true;
     return (alert("This is not a valid email address"));
 }
 
