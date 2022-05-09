@@ -18,7 +18,7 @@ function ioEmail(email) {
   let regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9-]+(?:\.[io]+)*$/;
   let result = regex.test(email);
   return result;
-  return;
+  
 }
 
 /* You have a text that contain image names with their extention you need to write a function to 
